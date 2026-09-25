@@ -66,7 +66,7 @@ export function DrawStage({ pool, running, winner, platformLabel, sourceLabel, c
             {shown.text && (
               <p className="stage-quote">
                 “{shown.text.slice(0, 140)}
-                {shown.text.length > 140 ? "…" : "”"}
+                {shown.text.length > 140 ? "…" : ""}”
               </p>
             )}
           </>
