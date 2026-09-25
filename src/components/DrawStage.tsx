@@ -44,7 +44,7 @@ export function DrawStage({ pool, running, winner }: Props) {
       </div>
       <p className="draw-quote">
         {shown
-          ? `“${shown.text.slice(0, 140)}${shown.text.length > 140 ? "…" : "”}`
+          ? `“${shown.text.slice(0, 140)}${shown.text.length > 140 ? "…" : ""}”`
           : "Paste a video, set your rules, then pick."}
       </p>
     </div>
