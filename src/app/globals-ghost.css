@@ -1,0 +1,1 @@
+.btn.ghost{border-color:var(--line-strong);background:transparent;color:var(--bone-2)}.btn.ghost:hover:not(:disabled){border-color:var(--bone);color:var(--bone)}.btn.compact{min-height:2.25rem;padding:0.45rem 0.75rem;font-size:0.72rem}
