@@ -12,16 +12,20 @@ export const metadata = {
 export default async function AppPage({
   searchParams,
 }: {
-  searchParams: Promise<{ platform?: string }>;
+  searchParams: Promise<{ platform?: string; demo?: string }>;
 }) {
   const plan = await getPlanFromCookies();
-  const { platform } = await searchParams;
+  const { platform, demo } = await searchParams;
   const initialPlatform = PLATFORM_ORDER.find((p) => p === platform) as Platform | undefined;
 
   return (
     <main className="app-page">
       <SiteHeader plan={plan} />
-      <PickerApp initialPlan={plan} initialPlatform={initialPlatform} />
+      <PickerApp
+        initialPlan={plan}
+        initialPlatform={initialPlatform}
+        autoDemo={demo === "1" || demo === "true"}
+      />
       <SiteFooter compact />
     </main>
   );
