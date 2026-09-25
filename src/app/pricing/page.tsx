@@ -4,7 +4,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { PricingTable } from "@/components/PricingTable";
 import { getPlanFromCookies } from "@/lib/license";
 import { FREE_COMMENT_CAP, PRO_PRICE_USD } from "@/lib/types";
-import heroStage from "../../../public/hero-stage.jpg";
+
+const heroStage = "https://images.unsplash.com/photo-1459749411175-04bf52967778?auto=format&fit=crop&w=2400&q=80";
 
 const FAQ: Array<[string, string]> = [
   [
@@ -36,7 +37,7 @@ export default async function PricingPage({
   return (
     <main className="pricing-page">
       <div className="pricing-atmos" aria-hidden>
-        <Image src={heroStage} alt="" fill preload placeholder="blur" sizes="100vw" />
+        <Image src={heroStage} alt="" fill preload unoptimized sizes="100vw" />
       </div>
       <SiteHeader plan={plan} overlay />
 

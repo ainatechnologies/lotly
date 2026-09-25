@@ -7,8 +7,9 @@ import { PricingTable } from "@/components/PricingTable";
 import { getPlanFromCookies } from "@/lib/license";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import { PRO_PRICE_USD } from "@/lib/types";
-import heroStage from "../../public/hero-stage.jpg";
-import crowd from "../../public/crowd.jpg";
+
+const heroStage = "https://images.unsplash.com/photo-1459749411175-04bf52967778?auto=format&fit=crop&w=2400&q=80";
+const crowd = "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=2000&q=80";
 
 const WORDMARK = ["L", "O", "T", "L", "Y"];
 
@@ -31,7 +32,7 @@ export default async function HomePage() {
           alt="A crowd with hands raised under stage lights"
           fill
           preload
-          placeholder="blur"
+          unoptimized
           sizes="100vw"
           className="hero-img"
         />
@@ -137,7 +138,7 @@ export default async function HomePage() {
       </section>
 
       <section className="closer">
-        <Image src={crowd} alt="" fill sizes="100vw" placeholder="blur" className="closer-img" />
+        <Image src={crowd} alt="" fill sizes="100vw" unoptimized className="closer-img" />
         <div className="closer-shade" aria-hidden />
         <div className="closer-inner">
           <h2 className="closer-title">They showed up. Pick one fairly.</h2>
